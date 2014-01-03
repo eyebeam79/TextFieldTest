@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @end
 
@@ -18,6 +19,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    [self.textField becomeFirstResponder];
+    
+    
+}
+- (IBAction)dismissKeyboard:(id)sender
+{
+    [self.textField resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
